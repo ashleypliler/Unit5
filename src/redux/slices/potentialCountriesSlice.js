@@ -25,4 +25,4 @@ export const {setPotentialCountries, deletePotentialContries } = potentialCountr
 
 export const selectPotentials = (state) => state.potentialCountries.value;
 
-export default potentialCountriesSlice.reducer;
+export const potentialCountriesReducer = potentialCountriesSlice.reducer;

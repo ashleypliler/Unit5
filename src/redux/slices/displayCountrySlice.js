@@ -21,4 +21,4 @@ export const {setDisplayCountry, deleteDisplayCountry} = displayCountrySlice.act
 
 export const selectDisplay = (state) => state.displayedCountry.value;
 
-export default displayCountrySlice.reducer;
+export const displayedCountryReducer = displayCountrySlice.reducer;

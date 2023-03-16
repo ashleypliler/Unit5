@@ -3,20 +3,20 @@ import { useSelector } from "react-redux";
 import { selectDisplay } from "../redux/slices/displayCountrySlice";
 
 const Symbols = () => {
-    let currentDispay = useSelector(selectDisplay);
+    let currentDisplay = useSelector(selectDisplay);
 
     return (<div className="symbols">
         <div className="stack">
-            <h2>Flag of {currentDispay.name.common}:</h2>
-            {currentDispay.flags ? (
+            <h2>Flag of {currentDisplay.name.common}:</h2>
+            {currentDisplay.flags ? (
                 <img src={currentDisplay.flags.png}></img>
             ) : (
                 "(No Data Found)"
             )}
         </div>
         <div className="stack">
-            <h2>Coat of Arms of {currentDispay.name.common}:</h2>
-            {currentDispay.coatOfArms ? (
+            <h2>Coat of Arms of {currentDisplay.name.common}:</h2>
+            {currentDisplay.coatOfArms ? (
                 <img src={currentDisplay.coatOfArms.png}></img>
             ) : (
                 "(No Data Found)"
