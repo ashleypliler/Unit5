@@ -22,8 +22,8 @@ const potentialCountriesSlice = createSlice({
 });
 
 export const {setPotentialCountries, deletePotentialContries } = 
-    potentialCountriesSlice.actions;
+potentialCountriesSlice.actions;
 
 export const selectPotentials = (state) => state.potentialCountries.value;
 
-export default potentialCountriesSlice.reducer;
+export default potentialCountriesSlice.reducer
