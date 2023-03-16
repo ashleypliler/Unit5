@@ -11,7 +11,7 @@ function App() {
     console.log(potentials);
 
     let currentDisplay = useSelector(selectDisplay);
-    console.log("DISPLAY", currentDisplay);
+    console.log(currentDisplay);
 
     return (
         <div className="App font-link">

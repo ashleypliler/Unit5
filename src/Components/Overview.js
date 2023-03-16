@@ -13,6 +13,7 @@ const Overview = () => {
 
             <table>
                 <tr>
+                    <td>Borders: </td>
                     <td>
                         {currentDispay.borders 
                             ? currentDispay.borders.map((e, i, arr) => {

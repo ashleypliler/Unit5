@@ -7,8 +7,8 @@ const Weather = () => {
     const [weather, setWeather] = useState();
 
     let display = useSelector(selectDisplay);
-    let latitude = display.capitalInfo.LatLng[0];
-    let longitude = display.capitalInfo.LatLng[1];
+    let latitude = display.capitalInfo.latlng[0];
+    let longitude = display.capitalInfo.latlng[1];
 
     useEffect(() => {
         const options = {
@@ -38,25 +38,25 @@ const Weather = () => {
             <table className="overview-table">
                 <tr>
                     <td>Conditions: </td>
-                    <td>{weather.current.condition.text}</td>
+                    <td>{weather?.current?.condition?.text}</td>
                 </tr>
                 <tr>
                     <td>Temperature: </td>
-                    <td>{weather.current.temp_f} degrees Fahrenheit</td>
+                    <td>{weather?.current.temp_f} degrees Fahrenheit</td>
                 </tr>
                 <tr>
                     <td>Feels Like: </td>
-                    <td>{weather.current.feelslike_f} degrees Fahrenheit</td>
+                    <td>{weather?.current?.feelslike_f} degrees Fahrenheit</td>
                 </tr>
                 <tr>
                     <td>Humidity: </td>
-                    <td>{weather.current.humidity}%</td>
+                    <td>{weather?.current?.humidity}%</td>
                 </tr>
                 <tr>
                     <td>Wind Speed: </td>
                     <td>
-                        {weather.current.wind_mph} mph{""}
-                        {weather.current.wind_dir}
+                        {weather?.current?.wind_mph} mph{""}
+                        {weather?.current?.wind_dir}
                     </td>
                 </tr>
             </table>

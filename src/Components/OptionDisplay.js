@@ -9,7 +9,7 @@ const OptionDisplay = () => {
     const dispatch = useDispatch();
     return <div className="stack">{currentPotentials.map((e, i) => {
         return (
-            <h2 onClick={() => {
+            <h2 key={e.name.official} onClick={() => {
                 dispatch(setDisplayCountry(currentPotentials[i]))
             }}>{e.name.common}</h2>
         )
